@@ -86,10 +86,10 @@ int main(int argc, char* argv[])
 
 	// The exit code of the sample application.
 	int exitCode = 0;
-	int show_trackbars = 1;
+	int show_trackbars = 0;
 	int grabber_timeout = 3000;
 	int retval = 0;
-	int exposure_time = 3000;
+	int exposure_time = 5000;
 	int delay_us = 0;
 	int debouncer_us = 0;
 	int gain_increase = 0;
@@ -297,12 +297,12 @@ int main(int argc, char* argv[])
 				cv::Mat mat8_uc3_small_track_overlay;
 				mat8_uc3_small_track.copyTo(mat8_uc3_small_track_overlay);
 
-				// draw tracking
+				// draw tracking (...names switched)
 				Point pt_green = Point(tracking_result.at<double>(0, 0), tracking_result.at<double>(0, 1));
 				circle(mat8_uc3_small_track_overlay, pt_green, 1.5, cvScalar(0, 0, 255), CV_FILLED, 1.5);
 
 				Point pt_red = Point(tracking_result.at<double>(1, 0), tracking_result.at<double>(1, 1));
-				circle(mat8_uc3_small_track_overlay, pt_red, 1.5, cvScalar(0, 255, 0), CV_FILLED, 1.5);
+				circle(mat8_uc3_small_track_overlay, pt_red, 1.5, cvScalar(255, 0, 0), CV_FILLED, 1.5);
 
 				// add tracking to overlay and combine with source matrix
 				alpha_ = (double)alpha/10;
