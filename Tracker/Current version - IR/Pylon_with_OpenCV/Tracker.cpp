@@ -161,7 +161,7 @@ int main(int argc, char* argv[])
 
 		CFloatPtr(nodemap.GetNode("ExposureTime"))->SetValue(exposure_time);
 		CEnumerationPtr(nodemap.GetNode("PixelFormat"))->FromString("Mono8");
-
+	  
 		// Set to hardware trigger mode: 
 		// Select the frame start trigger
 		camera.TriggerSelector.SetValue(TriggerSelector_FrameStart);
@@ -182,7 +182,7 @@ int main(int argc, char* argv[])
 		{
 			// Define the video file name.
 			std::stringstream videoFileName_;
-			videoFileName_ << base_filename << ".avi";
+			videoFileName_ << base_filename << "IR.avi";
 			std::string videoFileName = videoFileName_.str();
 			// Define the video frame size.
 			cv::Size frameSize = Size(acq_frame_width / scale_factor, acq_frame_height / scale_factor);
@@ -190,21 +190,21 @@ int main(int argc, char* argv[])
 		}
 																												  
 		// create output tracking .csv file
-		std::stringstream outputfilename_;
-		outputfilename_ << base_filename << ".csv";
-		std::string outputfilename = outputfilename_.str();
-		ofstream output_timestamps;
-		output_timestamps.open(outputfilename);
-		output_timestamps << camera.GetDeviceInfo().GetVendorName() << "_" << camera.GetDeviceInfo().GetModelName() << "\n";
-		output_timestamps << "Tracking height (px): " << acq_frame_height / scale_factor << " | Tracking width (px): " << acq_frame_width / scale_factor << "\n";
+	//	std::stringstream outputfilename_;
+	//	outputfilename_ << base_filename << ".csv";
+	//	std::string outputfilename = outputfilename_.str();
+	//	ofstream output_timestamps;
+	//	output_timestamps.open(outputfilename);
+	//	output_timestamps << camera.GetDeviceInfo().GetVendorName() << "_" << camera.GetDeviceInfo().GetModelName() << "\n";
+	//	output_timestamps << "Tracking height (px): " << acq_frame_height / scale_factor << " | Tracking width (px): " << acq_frame_width / scale_factor << "\n";
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		// Create display windows
-		namedWindow("Live Image", CV_WINDOW_NORMAL); // other options: CV_AUTOSIZE, CV_FREERATIO, CV_WINDOW_NORMAL
-		resizeWindow("Live Image", 500, 500);
-		namedWindow("Tracking", CV_WINDOW_NORMAL);
-		resizeWindow("Tracking", 500, 500);
+		namedWindow("Live Image IR", CV_WINDOW_NORMAL); // other options: CV_AUTOSIZE, CV_FREERATIO, CV_WINDOW_NORMAL
+		resizeWindow("Live Image IR", 500, 500);
+		//namedWindow("Tracking", CV_WINDOW_NORMAL);
+		//resizeWindow("Tracking", 500, 500);
 
 		// Create bars
 		if (show_trackbars == 1)  {
@@ -237,7 +237,7 @@ int main(int argc, char* argv[])
 		// initialize matrices:
 		cv::Mat mat8_uc3(acq_frame_height, acq_frame_width, CV_8UC3);
 		Size size_small(acq_frame_height / scale_factor, acq_frame_width / scale_factor); // resize
-		cv::Mat mat8_uc3_small_track(acq_frame_height / scale_factor, acq_frame_width / scale_factor, CV_8UC3); // black image - stays black
+		//cv::Mat mat8_uc3_small_track(acq_frame_height / scale_factor, acq_frame_width / scale_factor, CV_8UC3); // black image - stays black
 		cv::Mat mat8_uc3_small_video(acq_frame_height / scale_factor, acq_frame_width / scale_factor, CV_8UC3); // for showing in video
 
 		// Clock for system time timestamps
@@ -276,10 +276,10 @@ int main(int argc, char* argv[])
 					first_tic = chunkTimestamp->GetValue();
 					// Get a fresh system timestamp: 
 					SYSTEMTIME st;
-					GetLocalTime(&st);
-					output_timestamps << "First frame system timestamp:  " << st.wYear << "-" << st.wMonth << "-" << st.wDay << "_" << st.wHour << "-" << st.wMinute << "-" << st.wSecond << "\n";
+					//GetLocalTime(&st);
+					//output_timestamps << "First frame system timestamp:  " << st.wYear << "-" << st.wMonth << "-" << st.wDay << "_" << st.wHour << "-" << st.wMinute << "-" << st.wSecond << "\n";
 					// Header written, now set up actual columns:
-					output_timestamps << "frame,cam_timestamp,sys_timestamp,green_x,green_y,red_x,red_y\n";
+					//output_timestamps << "frame,cam_timestamp,sys_timestamp,green_x,green_y,red_x,red_y\n";
 				}
 				// get high res system time stamp
 				auto tic_system = Clock::now().time_since_epoch().count();
@@ -294,28 +294,28 @@ int main(int argc, char* argv[])
 				mat8_uc3.release();
 
 				// Start tracking here 
-				tracking_result = GetThresholdedImage(mat8_uc3_small_video, red_h_low, red_s_low, red_v_low,
-					red_h_high, red_s_high, red_v_high, green_h_low, green_s_low, green_v_low, green_h_high, green_s_high, green_v_high);
+				//tracking_result = GetThresholdedImage(mat8_uc3_small_video, red_h_low, red_s_low, red_v_low,
+					//red_h_high, red_s_high, red_v_high, green_h_low, green_s_low, green_v_low, green_h_high, green_s_high, green_v_high);
 
 				// add overlay
-				cv::Mat mat8_uc3_small_track_overlay;
-				mat8_uc3_small_track.copyTo(mat8_uc3_small_track_overlay);
+				//cv::Mat mat8_uc3_small_track_overlay;
+				//mat8_uc3_small_track.copyTo(mat8_uc3_small_track_overlay);
 
 				// draw tracking (...names switched)
-				Point pt_green = Point(tracking_result.at<double>(0, 0), tracking_result.at<double>(0, 1));
-				circle(mat8_uc3_small_track_overlay, pt_green, 1.5, cvScalar(0, 0, 255), CV_FILLED, 1.5);
+				//Point pt_green = Point(tracking_result.at<double>(0, 0), tracking_result.at<double>(0, 1));
+				//circle(mat8_uc3_small_track_overlay, pt_green, 1.5, cvScalar(0, 0, 255), CV_FILLED, 1.5);
 
-				Point pt_red = Point(tracking_result.at<double>(1, 0), tracking_result.at<double>(1, 1));
-				circle(mat8_uc3_small_track_overlay, pt_red, 1.5, cvScalar(255, 0, 0), CV_FILLED, 1.5);
+				//Point pt_red = Point(tracking_result.at<double>(1, 0), tracking_result.at<double>(1, 1));
+				//circle(mat8_uc3_small_track_overlay, pt_red, 1.5, cvScalar(255, 0, 0), CV_FILLED, 1.5);
 
 				// add tracking to overlay and combine with source matrix
-				alpha_ = (double)alpha/10;
-				cv::addWeighted(mat8_uc3_small_track_overlay, alpha_, mat8_uc3_small_track, 1 - alpha_, 0, mat8_uc3_small_track);
+				//alpha_ = (double)alpha/10;
+				//cv::addWeighted(mat8_uc3_small_track_overlay, alpha_, mat8_uc3_small_track, 1 - alpha_, 0, mat8_uc3_small_track);
 
 				// save
-				output_timestamps << grabbedImages << "," << chunkTimestamp->GetValue() << "," << tic_system  << "," << tracking_result.at<double>(0, 0) << "," <<
-					tracking_result.at<double>(0, 1) << "," << tracking_result.at<double>(1, 0) << ","
-					<< tracking_result.at<double>(1, 1) << "\n";
+				//output_timestamps << grabbedImages << "," << chunkTimestamp->GetValue() << "," << tic_system  << "," << tracking_result.at<double>(0, 0) << "," <<
+					//tracking_result.at<double>(0, 1) << "," << tracking_result.at<double>(1, 0) << ","
+					//<< tracking_result.at<double>(1, 1) << "\n";
 	
 				// invert channel order
 				// cv::cvtColor(mat8_uc3_small_video, mat8_uc3_small_video, cv::COLOR_BGR2RGB);
@@ -341,11 +341,11 @@ int main(int argc, char* argv[])
 				putText(mat8_uc3_small_video, str, cvPoint(3, 15),
 					FONT_HERSHEY_SIMPLEX, 0.35, cvScalar(255, 255, 255), 0, CV_AA);
 				// Create an OpenCV display window.
-				imshow("Live Image", mat8_uc3_small_video);
-				imshow("Tracking", mat8_uc3_small_track);
+				imshow("Live Image IR", mat8_uc3_small_video);
+				//imshow("Tracking", mat8_uc3_small_track);
 
 				mat8_uc3_small_video.release(); // release opencv matrices. Don't know if this is strictly necessary.
-				tracking_result.release();
+				//tracking_result.release();
 				waitKey(1);
 				// 
 #ifdef PYLON_WIN_BUILD
@@ -360,7 +360,7 @@ int main(int argc, char* argv[])
 		}
 
 		// close timestamp file 
-		output_timestamps.close();
+		//output_timestamps.close();
 
 		// Release the video file on leaving.
 		if (recordVideo)

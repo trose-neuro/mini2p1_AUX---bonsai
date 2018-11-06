@@ -1,28 +1,9 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (Tracker_Horst.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   Tracker.cpp
-c:\code\mini2p_aux---tracking\tracker\current version - ir\pylon_with_opencv\tracker.cpp(305): warning C4244: 'argument': conversion from '_Tp' to '_Tp', possible loss of data
-          with
-          [
-              _Tp=double
-          ]
-          and
-          [
-              _Tp=int
-          ]
-c:\code\mini2p_aux---tracking\tracker\current version - ir\pylon_with_opencv\tracker.cpp(306): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-c:\code\mini2p_aux---tracking\tracker\current version - ir\pylon_with_opencv\tracker.cpp(308): warning C4244: 'argument': conversion from '_Tp' to '_Tp', possible loss of data
-          with
-          [
-              _Tp=double
-          ]
-          and
-          [
-              _Tp=int
-          ]
-c:\code\mini2p_aux---tracking\tracker\current version - ir\pylon_with_opencv\tracker.cpp(309): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\code\mini2p_aux---tracking\tracker\current version - ir\pylon_with_opencv\tracker.cpp(278): warning C4101: 'st': unreferenced local variable
   Generating code
-  1 of 3964 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+  0 of 3893 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    9 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Pylon_with_OpenCV.vcxproj -> C:\code\mini2p_AUX---tracking\Tracker\Current version - IR\x64\Release\Tracker_IR.exe
