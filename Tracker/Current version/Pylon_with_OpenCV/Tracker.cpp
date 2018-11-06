@@ -122,7 +122,13 @@ int main(int argc, char* argv[])
 	{
 		CDeviceInfo info;
 		info.SetDeviceClass(Camera_t::DeviceClass());
-		Camera_t camera(CTlFactory::GetInstance().CreateFirstDevice());
+		// Camera_t camera(CTlFactory::GetInstance().CreateFirstDevice());
+		
+		
+		// state sewrial number of camera explicitely - no just use the first device
+	    String_t serialNumber = "22370143";
+		info.SetSerialNumber(serialNumber);
+		Camera_t camera(CTlFactory::GetInstance().CreateDevice(info));
 		// Print the model name of the camera
 		cout << "Using device " << camera.GetDeviceInfo().GetVendorName() << " " << camera.GetDeviceInfo().GetModelName() << endl;
 

@@ -1,5 +1,5 @@
 ﻿  Tracker.cpp
-c:\code\2p_tracking\tracker\current version\pylon_with_opencv\tracker.cpp(301): warning C4244: 'argument': conversion from '_Tp' to '_Tp', possible loss of data
+c:\code\mini2p_aux---tracking\tracker\current version\pylon_with_opencv\tracker.cpp(307): warning C4244: 'argument': conversion from '_Tp' to '_Tp', possible loss of data
           with
           [
               _Tp=double
@@ -8,8 +8,8 @@ c:\code\2p_tracking\tracker\current version\pylon_with_opencv\tracker.cpp(301): 
           [
               _Tp=int
           ]
-c:\code\2p_tracking\tracker\current version\pylon_with_opencv\tracker.cpp(302): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-c:\code\2p_tracking\tracker\current version\pylon_with_opencv\tracker.cpp(304): warning C4244: 'argument': conversion from '_Tp' to '_Tp', possible loss of data
+c:\code\mini2p_aux---tracking\tracker\current version\pylon_with_opencv\tracker.cpp(308): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\code\mini2p_aux---tracking\tracker\current version\pylon_with_opencv\tracker.cpp(310): warning C4244: 'argument': conversion from '_Tp' to '_Tp', possible loss of data
           with
           [
               _Tp=double
@@ -18,10 +18,10 @@ c:\code\2p_tracking\tracker\current version\pylon_with_opencv\tracker.cpp(304): 
           [
               _Tp=int
           ]
-c:\code\2p_tracking\tracker\current version\pylon_with_opencv\tracker.cpp(305): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\code\mini2p_aux---tracking\tracker\current version\pylon_with_opencv\tracker.cpp(311): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   Generating code
   1 of 3964 functions (<0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     3 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  Pylon_with_OpenCV.vcxproj -> C:\code\2P_tracking\Tracker\Current version\x64\Release\Tracker_Horst.exe
+  Pylon_with_OpenCV.vcxproj -> C:\code\mini2p_AUX---tracking\Tracker\Current version\x64\Release\Tracker_Horst.exe
