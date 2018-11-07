@@ -1,0 +1,1018 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\basler\pylon 5\development\include\base\</FILEPATH>
+      <FILENAME>gcexception.h</FILENAME>
+      <LINE>115</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'GenICam_3_1_Basler_pylon_v5_1::GenericException::m_SourceLine' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>GenICam_3_1_Basler_pylon_v5_1::GenericException::{ctor}</FUNCTION>
+    <DECORATED>??0GenericException@GenICam_3_1_Basler_pylon_v5_1@@QEAA@AEBV01@@Z</DECORATED>
+    <FUNCLINE>115</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\basler\pylon 5\development\include\pylon\</FILEPATH>
+      <FILENAME>result.h</FILENAME>
+      <LINE>306</LINE>
+      <COLUMN>24</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Pylon::EventResult::Buffer' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Pylon::EventResult::{ctor}</FUNCTION>
+    <DECORATED>??0EventResult@Pylon@@QEAA@XZ</DECORATED>
+    <FUNCLINE>306</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\basler\pylon 5\development\include\pylon\</FILEPATH>
+      <FILENAME>pixelformatconvertermonopacked.h</FILENAME>
+      <LINE>47</LINE>
+      <COLUMN>48</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Pylon::CPixelFormatConverterMonoPacked::Unpack12</FUNCTION>
+    <DECORATED>?Unpack12@CPixelFormatConverterMonoPacked@Pylon@@SAXPEAGPEBEH@Z</DECORATED>
+    <FUNCLINE>36</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\basler\pylon 5\development\include\pylon\</FILEPATH>
+      <FILENAME>pixelformatconvertermonopacked.h</FILENAME>
+      <LINE>47</LINE>
+      <COLUMN>67</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Pylon::CPixelFormatConverterMonoPacked::Unpack12</FUNCTION>
+    <DECORATED>?Unpack12@CPixelFormatConverterMonoPacked@Pylon@@SAXPEAGPEBEH@Z</DECORATED>
+    <FUNCLINE>36</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\basler\pylon 5\development\include\pylon\</FILEPATH>
+      <FILENAME>pixelformatconvertermonopacked.h</FILENAME>
+      <LINE>64</LINE>
+      <COLUMN>48</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Pylon::CPixelFormatConverterMonoPacked::Unpack10</FUNCTION>
+    <DECORATED>?Unpack10@CPixelFormatConverterMonoPacked@Pylon@@SAXPEAGPEBEH@Z</DECORATED>
+    <FUNCLINE>53</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\basler\pylon 5\development\include\pylon\</FILEPATH>
+      <FILENAME>pixelformatconvertermonopacked.h</FILENAME>
+      <LINE>64</LINE>
+      <COLUMN>67</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Pylon::CPixelFormatConverterMonoPacked::Unpack10</FUNCTION>
+    <DECORATED>?Unpack10@CPixelFormatConverterMonoPacked@Pylon@@SAXPEAGPEBEH@Z</DECORATED>
+    <FUNCLINE>53</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>cvstd.hpp</FILENAME>
+      <LINE>571</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::String::len_' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::String::{ctor}</FUNCTION>
+    <DECORATED>??0String@cv@@QEAA@AEBV01@@Z</DECORATED>
+    <FUNCLINE>571</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>76</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::_InputArray::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::_InputArray::{ctor}</FUNCTION>
+    <DECORATED>??0_InputArray@cv@@QEAA@XZ</DECORATED>
+    <FUNCLINE>76</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>77</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::_InputArray::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::_InputArray::{ctor}</FUNCTION>
+    <DECORATED>??0_InputArray@cv@@QEAA@HPEAX@Z</DECORATED>
+    <FUNCLINE>77</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>78</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::_InputArray::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::_InputArray::{ctor}</FUNCTION>
+    <DECORATED>??0_InputArray@cv@@QEAA@AEBVMat@1@@Z</DECORATED>
+    <FUNCLINE>78</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>79</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::_InputArray::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::_InputArray::{ctor}</FUNCTION>
+    <DECORATED>??0_InputArray@cv@@QEAA@AEBV?$vector@VMat@cv@@V?$allocator@VMat@cv@@@std@@@std@@@Z</DECORATED>
+    <FUNCLINE>79</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>80</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::_InputArray::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::_InputArray::{ctor}</FUNCTION>
+    <DECORATED>??0_InputArray@cv@@QEAA@AEBVUMat@1@@Z</DECORATED>
+    <FUNCLINE>80</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>81</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::_InputArray::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::_InputArray::{ctor}</FUNCTION>
+    <DECORATED>??0_InputArray@cv@@QEAA@AEBV?$vector@VUMat@cv@@V?$allocator@VUMat@cv@@@std@@@std@@@Z</DECORATED>
+    <FUNCLINE>81</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>98</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::_InputArray::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::_InputArray::{ctor}</FUNCTION>
+    <DECORATED>??0_InputArray@cv@@QEAA@AEBV?$vector@_NV?$allocator@_N@std@@@std@@@Z</DECORATED>
+    <FUNCLINE>98</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>106</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::_InputArray::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::_InputArray::{ctor}</FUNCTION>
+    <DECORATED>??0_InputArray@cv@@QEAA@AEBV?$vector@V?$vector@_NV?$allocator@_N@std@@@std@@V?$allocator@V?$vector@_NV?$allocator@_N@std@@@std@@@2@@std@@@Z</DECORATED>
+    <FUNCLINE>106</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>125</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::_InputArray::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::_InputArray::{ctor}</FUNCTION>
+    <DECORATED>??0_InputArray@cv@@QEAA@AEBN@Z</DECORATED>
+    <FUNCLINE>125</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>128</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::_InputArray::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::_InputArray::{ctor}</FUNCTION>
+    <DECORATED>??0_InputArray@cv@@QEAA@AEBVMatExpr@1@@Z</DECORATED>
+    <FUNCLINE>128</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>131</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::_InputArray::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::_InputArray::{ctor}</FUNCTION>
+    <DECORATED>??0_InputArray@cv@@QEAA@AEBVGpuMat@cuda@1@@Z</DECORATED>
+    <FUNCLINE>131</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>134</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::_InputArray::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::_InputArray::{ctor}</FUNCTION>
+    <DECORATED>??0_InputArray@cv@@QEAA@AEBV?$vector@VGpuMat@cuda@cv@@V?$allocator@VGpuMat@cuda@cv@@@std@@@std@@@Z</DECORATED>
+    <FUNCLINE>134</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>137</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::_InputArray::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::_InputArray::{ctor}</FUNCTION>
+    <DECORATED>??0_InputArray@cv@@QEAA@AEBVBuffer@ogl@1@@Z</DECORATED>
+    <FUNCLINE>137</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::_InputArray::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::_InputArray::{ctor}</FUNCTION>
+    <DECORATED>??0_InputArray@cv@@QEAA@AEBVHostMem@cuda@1@@Z</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>476</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::Mat::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::Mat::{ctor}</FUNCTION>
+    <DECORATED>??0Mat@cv@@QEAA@AEBV01@@Z</DECORATED>
+    <FUNCLINE>476</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>502</LINE>
+      <COLUMN>17</COLUMN>
+    </SFA>
+    <DEFECTCODE>6297</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.</DESCRIPTION>
+    <FUNCTION>cv::Mat::{ctor}</FUNCTION>
+    <DECORATED>??0Mat@cv@@QEAA@HHHPEAX_K@Z</DECORATED>
+    <FUNCLINE>495</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>502</LINE>
+      <COLUMN>17</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '&lt;&lt;' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '&lt;&lt;' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>cv::Mat::{ctor}</FUNCTION>
+    <DECORATED>??0Mat@cv@@QEAA@HHHPEAX_K@Z</DECORATED>
+    <FUNCLINE>495</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>535</LINE>
+      <COLUMN>17</COLUMN>
+    </SFA>
+    <DEFECTCODE>6297</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.</DESCRIPTION>
+    <FUNCTION>cv::Mat::{ctor}</FUNCTION>
+    <DECORATED>??0Mat@cv@@QEAA@V?$Size_@H@1@HPEAX_K@Z</DECORATED>
+    <FUNCLINE>528</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>535</LINE>
+      <COLUMN>17</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '&lt;&lt;' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '&lt;&lt;' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>cv::Mat::{ctor}</FUNCTION>
+    <DECORATED>??0Mat@cv@@QEAA@V?$Size_@H@1@HPEAX_K@Z</DECORATED>
+    <FUNCLINE>528</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>1335</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>cv::Mat::{ctor}</FUNCTION>
+    <DECORATED>??0Mat@cv@@QEAA@$$QEAV01@@Z</DECORATED>
+    <FUNCLINE>1335</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>1360</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>cv::Mat::=</FUNCTION>
+    <DECORATED>??4Mat@cv@@QEAAAEAV01@$$QEAV01@@Z</DECORATED>
+    <FUNCLINE>1360</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>1456</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::MatStep::buf' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::MatStep::{ctor}</FUNCTION>
+    <DECORATED>??0MatStep@cv@@QEAA@XZ</DECORATED>
+    <FUNCLINE>1456</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>1462</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::MatStep::buf' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::MatStep::{ctor}</FUNCTION>
+    <DECORATED>??0MatStep@cv@@QEAA@_K@Z</DECORATED>
+    <FUNCLINE>1462</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>2065</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::SparseMat::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::SparseMat::{ctor}</FUNCTION>
+    <DECORATED>??0SparseMat@cv@@QEAA@AEBV01@@Z</DECORATED>
+    <FUNCLINE>2065</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>2132</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6297</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.</DESCRIPTION>
+    <FUNCTION>cv::SparseMat::elemSize</FUNCTION>
+    <DECORATED>?elemSize@SparseMat@cv@@QEBA_KXZ</DECORATED>
+    <FUNCLINE>2130</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>2132</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '&lt;&lt;' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '&lt;&lt;' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>cv::SparseMat::elemSize</FUNCTION>
+    <DECORATED>?elemSize@SparseMat@cv@@QEBA_KXZ</DECORATED>
+    <FUNCLINE>2130</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>2576</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>6011</DEFECTCODE>
+    <DESCRIPTION>Dereferencing NULL pointer 'm'. See line 2573 for an earlier location where this can occur</DESCRIPTION>
+    <FUNCTION>cv::MatConstIterator::{ctor}</FUNCTION>
+    <DECORATED>??0MatConstIterator@cv@@QEAA@PEBVMat@1@HH@Z</DECORATED>
+    <FUNCLINE>2572</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+        <FILENAME>mat.inl.hpp</FILENAME>
+        <LINE>2573</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+        <FILENAME>mat.inl.hpp</FILENAME>
+        <LINE>2573</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+        <FILENAME>mat.inl.hpp</FILENAME>
+        <LINE>2573</LINE>
+        <COLUMN>42</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+        <FILENAME>mat.inl.hpp</FILENAME>
+        <LINE>2573</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+        <FILENAME>mat.inl.hpp</FILENAME>
+        <LINE>2573</LINE>
+        <COLUMN>70</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+        <FILENAME>mat.inl.hpp</FILENAME>
+        <LINE>2575</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'_m' may be NULL (Skip this branch)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+        <FILENAME>mat.inl.hpp</FILENAME>
+        <LINE>2576</LINE>
+        <COLUMN>23</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'_m' is dereferenced, but may still be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>2590</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>6011</DEFECTCODE>
+    <DESCRIPTION>Dereferencing NULL pointer 'm'. See line 2587 for an earlier location where this can occur</DESCRIPTION>
+    <FUNCTION>cv::MatConstIterator::{ctor}</FUNCTION>
+    <DECORATED>??0MatConstIterator@cv@@QEAA@PEBVMat@1@V?$Point_@H@1@@Z</DECORATED>
+    <FUNCLINE>2586</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+        <FILENAME>mat.inl.hpp</FILENAME>
+        <LINE>2587</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+        <FILENAME>mat.inl.hpp</FILENAME>
+        <LINE>2587</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+        <FILENAME>mat.inl.hpp</FILENAME>
+        <LINE>2587</LINE>
+        <COLUMN>42</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+        <FILENAME>mat.inl.hpp</FILENAME>
+        <LINE>2587</LINE>
+        <COLUMN>57</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+        <FILENAME>mat.inl.hpp</FILENAME>
+        <LINE>2587</LINE>
+        <COLUMN>70</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+        <FILENAME>mat.inl.hpp</FILENAME>
+        <LINE>2589</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'_m' may be NULL (Skip this branch)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+        <FILENAME>mat.inl.hpp</FILENAME>
+        <LINE>2590</LINE>
+        <COLUMN>23</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'_m' is dereferenced, but may still be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>2600</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::MatConstIterator::m' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::MatConstIterator::{ctor}</FUNCTION>
+    <DECORATED>??0MatConstIterator@cv@@QEAA@AEBV01@@Z</DECORATED>
+    <FUNCLINE>2600</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>3039</LINE>
+      <COLUMN>24</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::SparseMatConstIterator::m' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::SparseMatConstIterator::{ctor}</FUNCTION>
+    <DECORATED>??0SparseMatConstIterator@cv@@QEAA@AEBV01@@Z</DECORATED>
+    <FUNCLINE>3039</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>3585</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::UMat::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::UMat::{ctor}</FUNCTION>
+    <DECORATED>??0UMat@cv@@QEAA@AEBV01@@Z</DECORATED>
+    <FUNCLINE>3585</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>3822</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>cv::UMat::{ctor}</FUNCTION>
+    <DECORATED>??0UMat@cv@@QEAA@$$QEAV01@@Z</DECORATED>
+    <FUNCLINE>3822</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>3822</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::UMat::usageFlags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::UMat::{ctor}</FUNCTION>
+    <DECORATED>??0UMat@cv@@QEAA@$$QEAV01@@Z</DECORATED>
+    <FUNCLINE>3822</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>3846</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>cv::UMat::=</FUNCTION>
+    <DECORATED>??4UMat@cv@@QEAAAEAV01@$$QEAV01@@Z</DECORATED>
+    <FUNCLINE>3846</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>persistence.hpp</FILENAME>
+      <LINE>1325</LINE>
+      <COLUMN>17</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::FileNode::fs' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::FileNode::{ctor}</FUNCTION>
+    <DECORATED>??0FileNode@cv@@QEAA@AEBV01@@Z</DECORATED>
+    <FUNCLINE>1325</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>utility.hpp</FILENAME>
+      <LINE>308</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::TickMeter::counter' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::TickMeter::{ctor}</FUNCTION>
+    <DECORATED>??0TickMeter@cv@@QEAA@XZ</DECORATED>
+    <FUNCLINE>308</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>utility.hpp</FILENAME>
+      <LINE>499</LINE>
+      <COLUMN>60</COLUMN>
+    </SFA>
+    <DEFECTCODE>6297</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow:  32-bit value is shifted, then cast to 64-bit value.  Results might not be an expected value.</DESCRIPTION>
+    <FUNCTION>cv::getElemSize</FUNCTION>
+    <DECORATED>?getElemSize@cv@@YA_KH@Z</DECORATED>
+    <FUNCLINE>499</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>utility.hpp</FILENAME>
+      <LINE>499</LINE>
+      <COLUMN>60</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '&lt;&lt;' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '&lt;&lt;' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>cv::getElemSize</FUNCTION>
+    <DECORATED>?getElemSize@cv@@YA_KH@Z</DECORATED>
+    <FUNCLINE>499</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>types_c.h</FILENAME>
+      <LINE>334</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable '_IplImage::align' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>_IplImage::{ctor}</FUNCTION>
+    <DECORATED>??0_IplImage@@QEAA@XZ</DECORATED>
+    <FUNCLINE>334</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>types_c.h</FILENAME>
+      <LINE>460</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CvMat::hdr_refcount' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CvMat::{ctor}</FUNCTION>
+    <DECORATED>??0CvMat@@QEAA@XZ</DECORATED>
+    <FUNCLINE>460</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>types_c.h</FILENAME>
+      <LINE>461</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CvMat::hdr_refcount' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CvMat::{ctor}</FUNCTION>
+    <DECORATED>??0CvMat@@QEAA@AEBU0@@Z</DECORATED>
+    <FUNCLINE>461</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>types_c.h</FILENAME>
+      <LINE>527</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CvMat::hdr_refcount' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CvMat::{ctor}</FUNCTION>
+    <DECORATED>??0CvMat@@QEAA@AEBVMat@cv@@@Z</DECORATED>
+    <FUNCLINE>527</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>types_c.h</FILENAME>
+      <LINE>651</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CvMatND::type' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CvMatND::{ctor}</FUNCTION>
+    <DECORATED>??0CvMatND@@QEAA@XZ</DECORATED>
+    <FUNCLINE>651</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>types_c.h</FILENAME>
+      <LINE>1129</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CvScalar::val' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CvScalar::{ctor}</FUNCTION>
+    <DECORATED>??0CvScalar@@QEAA@XZ</DECORATED>
+    <FUNCLINE>1129</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\imgproc\</FILEPATH>
+      <FILENAME>types_c.h</FILENAME>
+      <LINE>414</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CvMoments::m12' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CvMoments::{ctor}</FUNCTION>
+    <DECORATED>??0CvMoments@@QEAA@XZ</DECORATED>
+    <FUNCLINE>414</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\imgproc\</FILEPATH>
+      <FILENAME>imgproc_c.h</FILENAME>
+      <LINE>1131</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CvFont::vscale' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CvFont::{ctor}</FUNCTION>
+    <DECORATED>??0CvFont@@QEAA@XZ</DECORATED>
+    <FUNCLINE>1131</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\</FILEPATH>
+      <FILENAME>imgproc.hpp</FILENAME>
+      <LINE>4804</LINE>
+      <COLUMN>21</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>cv::LineIterator::++</FUNCTION>
+    <DECORATED>??ELineIterator@cv@@QEAAAEAV01@XZ</DECORATED>
+    <FUNCLINE>4800</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\</FILEPATH>
+      <FILENAME>imgproc.hpp</FILENAME>
+      <LINE>4821</LINE>
+      <COLUMN>35</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>cv::LineIterator::pos</FUNCTION>
+    <DECORATED>?pos@LineIterator@cv@@QEBA?AV?$Point_@H@2@XZ</DECORATED>
+    <FUNCLINE>4817</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>types.hpp</FILENAME>
+      <LINE>1157</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::Point_&lt;int&gt;::x' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::Point_&lt;int&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Point_@H@cv@@QEAA@AEBV01@@Z</DECORATED>
+    <FUNCLINE>1157</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>types.hpp</FILENAME>
+      <LINE>1650</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::Size_&lt;int&gt;::height' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::Size_&lt;int&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Size_@H@cv@@QEAA@AEBV01@@Z</DECORATED>
+    <FUNCLINE>1650</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>853</LINE>
+      <COLUMN>53</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::Matx&lt;double,4,1&gt;::val' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;double,4,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??$?0$03@?$Matx@N$03$00@cv@@QEAA@AEBV?$Matx@N$03$03@1@AEBV01@UMatx_MatMulOp@1@@Z</DECORATED>
+    <FUNCLINE>853</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>113</LINE>
+      <COLUMN>37</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::_InputArray::flags' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::_InputArray::{ctor}</FUNCTION>
+    <DECORATED>??$?0N$03$00@_InputArray@cv@@QEAA@AEBV?$Matx@N$03$00@1@@Z</DECORATED>
+    <FUNCLINE>113</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\basler\pylon 5\development\include\pylon\private\</FILEPATH>
+      <FILENAME>devicespecificgrabresultptr.h</FILENAME>
+      <LINE>255</LINE>
+      <COLUMN>51</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Pylon::CDeviceSpecificGrabResultPtr&lt;Pylon::CBaslerUsbGrabResultData&gt;::m_pGrabResultData' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Pylon::CDeviceSpecificGrabResultPtr&lt;Pylon::CBaslerUsbGrabResultData&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$CDeviceSpecificGrabResultPtr@VCBaslerUsbGrabResultData@Pylon@@@Pylon@@QEAA@AEBV01@@Z</DECORATED>
+    <FUNCLINE>255</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>562</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>6294</DEFECTCODE>
+    <DESCRIPTION>Ill-defined for-loop:  initial condition does not satisfy test.  Loop body not executed.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;float,3,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@M$02$00@cv@@QEAA@MMM@Z</DECORATED>
+    <FUNCLINE>558</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>562</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>6201</DEFECTCODE>
+    <DESCRIPTION>Index '3' is out of valid index range '0' to '2' for possibly stack allocated buffer 'this-&gt;val'.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;float,3,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@M$02$00@cv@@QEAA@MMM@Z</DECORATED>
+    <FUNCLINE>558</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>663</LINE>
+      <COLUMN>17</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::Matx&lt;double,4,1&gt;::val' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;double,4,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@N$03$00@cv@@QEAA@PEBN@Z</DECORATED>
+    <FUNCLINE>663</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>554</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>6294</DEFECTCODE>
+    <DESCRIPTION>Ill-defined for-loop:  initial condition does not satisfy test.  Loop body not executed.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;float,2,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@M$01$00@cv@@QEAA@MM@Z</DECORATED>
+    <FUNCLINE>550</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>554</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>6201</DEFECTCODE>
+    <DESCRIPTION>Index '2' is out of valid index range '0' to '1' for possibly stack allocated buffer 'this-&gt;val'.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;float,2,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@M$01$00@cv@@QEAA@MM@Z</DECORATED>
+    <FUNCLINE>550</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>570</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>6294</DEFECTCODE>
+    <DESCRIPTION>Ill-defined for-loop:  initial condition does not satisfy test.  Loop body not executed.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;float,4,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@M$03$00@cv@@QEAA@MMMM@Z</DECORATED>
+    <FUNCLINE>566</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>570</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>6201</DEFECTCODE>
+    <DESCRIPTION>Index '4' is out of valid index range '0' to '3' for possibly stack allocated buffer 'this-&gt;val'.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;float,4,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@M$03$00@cv@@QEAA@MMMM@Z</DECORATED>
+    <FUNCLINE>566</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>537</LINE>
+      <COLUMN>17</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::Matx&lt;double,4,1&gt;::val' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;double,4,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@N$03$00@cv@@QEAA@XZ</DECORATED>
+    <FUNCLINE>537</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>types.hpp</FILENAME>
+      <LINE>775</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::KeyPoint::size' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::KeyPoint::{ctor}</FUNCTION>
+    <DECORATED>??0KeyPoint@cv@@QEAA@AEBV01@@Z</DECORATED>
+    <FUNCLINE>775</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>

@@ -1,0 +1,3 @@
+﻿  Grab.cpp
+c:\code\mini2p_aux---tracking\grabber\grab\grab.cpp(51): error C2065: 'serialNumber': undeclared identifier
+c:\code\mini2p_aux---tracking\grabber\grab\grab.cpp(52): error C2065: 'serialNumber': undeclared identifier

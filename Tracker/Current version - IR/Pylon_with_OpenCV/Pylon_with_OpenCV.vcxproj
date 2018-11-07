@@ -22,7 +22,7 @@
     <ProjectGuid>{761F1B9A-ABF0-4951-960B-3FD489A6B858}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Pylon_with_OpenCV</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
     <ProjectName>Tracker_IR</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

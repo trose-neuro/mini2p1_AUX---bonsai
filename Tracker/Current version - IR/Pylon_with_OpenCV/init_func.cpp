@@ -27,7 +27,7 @@ typedef std::wstring String;
 // INIT FUNCTION:
 // Grab parameters from file in script folder
 int init(int &ptr_show_trackbars, int &ptr_grabber_timeout, int &ptr_exposure_time, int &ptr_delay_us, int &ptr_gain, int &ptr_debouncer, int &ptr_saveImages, int &ptr_recordVideo,
-	int &ptr_acq_frame_height, int &ptr_acq_frame_width, int &ptr_offset_x, int &ptr_offset_y, int &ptr_scale_factor,
+	int &ptr_acq_frame_height, int &ptr_acq_frame_width, int &ptr_offset_x, int &ptr_offset_y, int  &ptr_binning_x, int &ptr_binning_y, int &ptr_scale_factor,
 	int &ptr_red_h_low, int &ptr_red_s_low, int &ptr_red_v_low, 
 	int &ptr_red_h_high, int &ptr_red_s_high, int &ptr_red_v_high,
 	int &ptr_green_h_low, int &ptr_green_s_low, int &ptr_green_v_low,
@@ -86,6 +86,12 @@ int init(int &ptr_show_trackbars, int &ptr_grabber_timeout, int &ptr_exposure_ti
 		ptr_offset_y = GetPrivateProfileInt(TEXT("SETTINGS"), TEXT("offset_y"), 0, iniFilePath);
 		cout << "Offset y: " << ptr_offset_y << endl;
 		
+		ptr_binning_x = GetPrivateProfileInt(TEXT("SETTINGS"), TEXT("binning_x"), 0, iniFilePath);
+		cout << "Binning x: " << ptr_binning_x << endl;
+
+		ptr_binning_y = GetPrivateProfileInt(TEXT("SETTINGS"), TEXT("binning_y"), 0, iniFilePath);
+		cout << "Binning y: " << ptr_binning_y << endl;
+
 		ptr_scale_factor = GetPrivateProfileInt(TEXT("SETTINGS"), TEXT("scale_factor"), 0, iniFilePath);
 		cout << "Scale factor: " << ptr_scale_factor << endl;
 

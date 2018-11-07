@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\basler\pylon 5\development\include\base\</FILEPATH>
+      <FILENAME>gcexception.h</FILENAME>
+      <LINE>115</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'GenICam_3_1_Basler_pylon_v5_1::GenericException::m_SourceLine' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>GenICam_3_1_Basler_pylon_v5_1::GenericException::{ctor}</FUNCTION>
+    <DECORATED>??0GenericException@GenICam_3_1_Basler_pylon_v5_1@@QEAA@AEBV01@@Z</DECORATED>
+    <FUNCLINE>115</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\basler\pylon 5\development\include\pylon\</FILEPATH>
+      <FILENAME>result.h</FILENAME>
+      <LINE>306</LINE>
+      <COLUMN>24</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Pylon::EventResult::Buffer' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Pylon::EventResult::{ctor}</FUNCTION>
+    <DECORATED>??0EventResult@Pylon@@QEAA@XZ</DECORATED>
+    <FUNCLINE>306</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\basler\pylon 5\development\include\pylon\</FILEPATH>
+      <FILENAME>pixelformatconvertermonopacked.h</FILENAME>
+      <LINE>47</LINE>
+      <COLUMN>48</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Pylon::CPixelFormatConverterMonoPacked::Unpack12</FUNCTION>
+    <DECORATED>?Unpack12@CPixelFormatConverterMonoPacked@Pylon@@SAXPEAGPEBEH@Z</DECORATED>
+    <FUNCLINE>36</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\basler\pylon 5\development\include\pylon\</FILEPATH>
+      <FILENAME>pixelformatconvertermonopacked.h</FILENAME>
+      <LINE>47</LINE>
+      <COLUMN>67</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Pylon::CPixelFormatConverterMonoPacked::Unpack12</FUNCTION>
+    <DECORATED>?Unpack12@CPixelFormatConverterMonoPacked@Pylon@@SAXPEAGPEBEH@Z</DECORATED>
+    <FUNCLINE>36</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\basler\pylon 5\development\include\pylon\</FILEPATH>
+      <FILENAME>pixelformatconvertermonopacked.h</FILENAME>
+      <LINE>64</LINE>
+      <COLUMN>48</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Pylon::CPixelFormatConverterMonoPacked::Unpack10</FUNCTION>
+    <DECORATED>?Unpack10@CPixelFormatConverterMonoPacked@Pylon@@SAXPEAGPEBEH@Z</DECORATED>
+    <FUNCLINE>53</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\basler\pylon 5\development\include\pylon\</FILEPATH>
+      <FILENAME>pixelformatconvertermonopacked.h</FILENAME>
+      <LINE>64</LINE>
+      <COLUMN>67</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Pylon::CPixelFormatConverterMonoPacked::Unpack10</FUNCTION>
+    <DECORATED>?Unpack10@CPixelFormatConverterMonoPacked@Pylon@@SAXPEAGPEBEH@Z</DECORATED>
+    <FUNCLINE>53</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

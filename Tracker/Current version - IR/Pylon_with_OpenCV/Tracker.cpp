@@ -99,6 +99,8 @@ int main(int argc, char* argv[])
 	int acq_frame_width;
 	int offset_x;
 	int offset_y;
+	int binning_x;
+	int binning_y;
 	int scale_factor;
 	int playback_speed_video;
 	int alpha = 2;
@@ -107,7 +109,7 @@ int main(int argc, char* argv[])
 
 	cout << "Reading ini-file..." << endl;
 	retval = init(show_trackbars, grabber_timeout, exposure_time, delay_us, gain_increase, debouncer_us, saveImages, recordVideo,
-		acq_frame_height, acq_frame_width, offset_x, offset_y, scale_factor,
+		acq_frame_height, acq_frame_width, offset_x, offset_y, binning_x, binning_y, scale_factor,
 		red_h_low, red_s_low, red_v_low, red_h_high, red_s_high, red_v_high,
 		green_h_low, green_s_low, green_v_low, green_h_high, green_s_high, green_v_high, playback_speed_video, alpha, base_filename);
 
@@ -141,6 +143,8 @@ int main(int argc, char* argv[])
 		CIntegerPtr(nodemap.GetNode("Height"))->SetValue(acq_frame_height);
 		CIntegerPtr(nodemap.GetNode("OffsetX"))->SetValue(offset_x);
 		CIntegerPtr(nodemap.GetNode("OffsetY"))->SetValue(offset_y);
+		CIntegerPtr(nodemap.GetNode("BinningHorizontal"))->SetValue(binning_x);
+		CIntegerPtr(nodemap.GetNode("BinningVertical"))->SetValue(binning_y);
 		CEnumerationPtr gainAuto(nodemap.GetNode("GainAuto"));
 		CEnumerationPtr exposureAuto(nodemap.GetNode("ExposureAuto"));
 		CEnumerationPtr exposureMode(nodemap.GetNode("ExposureMode"));
@@ -275,7 +279,7 @@ int main(int argc, char* argv[])
 				{
 					first_tic = chunkTimestamp->GetValue();
 					// Get a fresh system timestamp: 
-					SYSTEMTIME st;
+					//SYSTEMTIME st;
 					//GetLocalTime(&st);
 					//output_timestamps << "First frame system timestamp:  " << st.wYear << "-" << st.wMonth << "-" << st.wDay << "_" << st.wHour << "-" << st.wMinute << "-" << st.wSecond << "\n";
 					// Header written, now set up actual columns:

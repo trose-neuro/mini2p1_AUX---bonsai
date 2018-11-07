@@ -1,9 +1,9 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (Tracker_Horst.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  stdafx.cpp
+  init_func.cpp
   Tracker.cpp
-c:\code\mini2p_aux---tracking\tracker\current version - ir\pylon_with_opencv\tracker.cpp(278): warning C4101: 'st': unreferenced local variable
+  thresh_tracking.cpp
   Generating code
-  0 of 3893 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  All 3893 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   Pylon_with_OpenCV.vcxproj -> C:\code\mini2p_AUX---tracking\Tracker\Current version - IR\x64\Release\Tracker_IR.exe
