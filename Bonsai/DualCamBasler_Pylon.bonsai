@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorkflowBuilder Version="2.4.0-preview">
+  <Workflow xmlns:q1="clr-namespace:Bonsai.Pylon;assembly=Bonsai.Pylon" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:q2="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision" xmlns="https://bonsai-rx.org/2018/workflow">
+    <Nodes>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q1:PylonCapture">
+          <q1:SerialNumber>22370143</q1:SerialNumber>
+          <q1:ParameterFile>COLOR sync to optitrack acA2040-55uc_22657050.pfs</q1:ParameterFile>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Image</Selector>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q2:VideoWriter">
+          <q2:FileName>C:\temp\testRGB.avi</q2:FileName>
+          <q2:Suffix>Timestamp</q2:Suffix>
+          <q2:Buffered>true</q2:Buffered>
+          <q2:Overwrite>false</q2:Overwrite>
+          <q2:FourCC>FMP4</q2:FourCC>
+          <q2:FrameRate>30</q2:FrameRate>
+          <q2:FrameSize>
+            <q2:Width>1348</q2:Width>
+            <q2:Height>1348</q2:Height>
+          </q2:FrameSize>
+          <q2:ResizeInterpolation>NearestNeighbor</q2:ResizeInterpolation>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q1:PylonCapture">
+          <q1:SerialNumber>22657050</q1:SerialNumber>
+          <q1:ParameterFile>sync to optitrack acA2040-55um_22657050.pfs</q1:ParameterFile>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Image</Selector>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q2:VideoWriter">
+          <q2:FileName>C:\temp\testIR.avi</q2:FileName>
+          <q2:Suffix>Timestamp</q2:Suffix>
+          <q2:Buffered>true</q2:Buffered>
+          <q2:Overwrite>false</q2:Overwrite>
+          <q2:FourCC>FMP4</q2:FourCC>
+          <q2:FrameRate>60</q2:FrameRate>
+          <q2:FrameSize>
+            <q2:Width>648</q2:Width>
+            <q2:Height>648</q2:Height>
+          </q2:FrameSize>
+          <q2:ResizeInterpolation>NearestNeighbor</q2:ResizeInterpolation>
+        </Combinator>
+      </Expression>
+    </Nodes>
+    <Edges>
+      <Edge From="0" To="1" Label="Source1" />
+      <Edge From="1" To="2" Label="Source1" />
+      <Edge From="3" To="4" Label="Source1" />
+      <Edge From="4" To="5" Label="Source1" />
+    </Edges>
+  </Workflow>
+  <ExtensionTypes>
+    <Type>Bonsai.Pylon.PylonCapture, Bonsai.Pylon, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.VideoWriter, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+  </ExtensionTypes>
+</WorkflowBuilder>
