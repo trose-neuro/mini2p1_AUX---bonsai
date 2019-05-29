@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorkflowBuilder Version="2.4.0-preview">
+  <Workflow xmlns:q2="clr-namespace:Bonsai.Harp;assembly=Bonsai.Harp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:q3="clr-namespace:Bonsai.Harp.CF;assembly=Bonsai.Harp.CF" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:q4="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision" xmlns:q1="clr-namespace:Bonsai.Pylon;assembly=Bonsai.Pylon" xmlns="https://bonsai-rx.org/2018/workflow">
+    <Nodes>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q1:PylonCapture">
+          <q1:SerialNumber>22657050</q1:SerialNumber>
+          <q1:ParameterFile>sync to optitrack acA2040-55um_22657050.pfs</q1:ParameterFile>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Image</Selector>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q1:PylonCapture">
+          <q1:SerialNumber>22370143</q1:SerialNumber>
+          <q1:ParameterFile>COLOR sync to optitrack acA2040-55uc_22657050.pfs</q1:ParameterFile>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Image</Selector>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q2:Device">
+          <q2:PortName>COM4</q2:PortName>
+          <q2:DeviceState>Active</q2:DeviceState>
+          <q2:DumpRegisters>true</q2:DumpRegisters>
+          <q2:LedState>On</q2:LedState>
+          <q2:VisualIndicators>On</q2:VisualIndicators>
+          <q2:Heartbeat>Enable</q2:Heartbeat>
+          <q2:IgnoreErrors>false</q2:IgnoreErrors>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="q3:WearEvent">
+        <q3:Type>Acquiring</q3:Type>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="TriggeredWindow">
+          <Count xsi:nil="true" />
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="SelectMany">
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="WorkflowInput">
+              <Name>Source1</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="q4:VideoWriter">
+                <q4:FileName>D:\data\tracking\BaslerIR.avi</q4:FileName>
+                <q4:Suffix>Timestamp</q4:Suffix>
+                <q4:Buffered>true</q4:Buffered>
+                <q4:Overwrite>true</q4:Overwrite>
+                <q4:FourCC>FMP4</q4:FourCC>
+                <q4:FrameRate>60</q4:FrameRate>
+                <q4:FrameSize>
+                  <q4:Width>0</q4:Width>
+                  <q4:Height>0</q4:Height>
+                </q4:FrameSize>
+                <q4:ResizeInterpolation>NearestNeighbor</q4:ResizeInterpolation>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+          </Nodes>
+          <Edges>
+            <Edge From="0" To="1" Label="Source1" />
+            <Edge From="1" To="2" Label="Source1" />
+          </Edges>
+        </Workflow>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>GrabResult.Timestamp</Selector>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="TriggeredWindow">
+          <Count xsi:nil="true" />
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="SelectMany">
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="WorkflowInput">
+              <Name>Source1</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="q4:Resize">
+                <q4:Size>
+                  <q4:Width>256</q4:Width>
+                  <q4:Height>256</q4:Height>
+                </q4:Size>
+                <q4:Interpolation>Linear</q4:Interpolation>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="q4:VideoWriter">
+                <q4:FileName>D:\data\tracking\BaslerRGB.avi</q4:FileName>
+                <q4:Suffix>Timestamp</q4:Suffix>
+                <q4:Buffered>true</q4:Buffered>
+                <q4:Overwrite>true</q4:Overwrite>
+                <q4:FourCC>FMP4</q4:FourCC>
+                <q4:FrameRate>30</q4:FrameRate>
+                <q4:FrameSize>
+                  <q4:Width>0</q4:Width>
+                  <q4:Height>0</q4:Height>
+                </q4:FrameSize>
+                <q4:ResizeInterpolation>NearestNeighbor</q4:ResizeInterpolation>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+          </Nodes>
+          <Edges>
+            <Edge From="0" To="1" Label="Source1" />
+            <Edge From="1" To="2" Label="Source1" />
+            <Edge From="2" To="3" Label="Source1" />
+          </Edges>
+        </Workflow>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>GrabResult.Timestamp</Selector>
+      </Expression>
+    </Nodes>
+    <Edges>
+      <Edge From="0" To="1" Label="Source1" />
+      <Edge From="0" To="8" Label="Source1" />
+      <Edge From="1" To="6" Label="Source1" />
+      <Edge From="2" To="3" Label="Source1" />
+      <Edge From="2" To="11" Label="Source1" />
+      <Edge From="3" To="9" Label="Source1" />
+      <Edge From="4" To="5" Label="Source1" />
+      <Edge From="5" To="6" Label="Source2" />
+      <Edge From="5" To="9" Label="Source2" />
+      <Edge From="6" To="7" Label="Source1" />
+      <Edge From="9" To="10" Label="Source1" />
+    </Edges>
+  </Workflow>
+  <ExtensionTypes>
+    <Type>Bonsai.Harp.CF.WearEvent, Bonsai.Harp.CF, Version=1.5.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Harp.Device, Bonsai.Harp, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Pylon.PylonCapture, Bonsai.Pylon, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Reactive.TriggeredWindow, Bonsai.Core, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.Resize, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.VideoWriter, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+  </ExtensionTypes>
+</WorkflowBuilder>

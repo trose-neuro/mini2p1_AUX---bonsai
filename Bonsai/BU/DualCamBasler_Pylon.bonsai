@@ -12,16 +12,25 @@
         <Selector>Image</Selector>
       </Expression>
       <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q2:Resize">
+          <q2:Size>
+            <q2:Width>256</q2:Width>
+            <q2:Height>256</q2:Height>
+          </q2:Size>
+          <q2:Interpolation>Linear</q2:Interpolation>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
         <Combinator xsi:type="q2:VideoWriter">
-          <q2:FileName>C:\temp\testRGB.avi</q2:FileName>
+          <q2:FileName>D:\data\tracking\BaslerRGB.avi</q2:FileName>
           <q2:Suffix>Timestamp</q2:Suffix>
           <q2:Buffered>true</q2:Buffered>
           <q2:Overwrite>false</q2:Overwrite>
           <q2:FourCC>FMP4</q2:FourCC>
           <q2:FrameRate>30</q2:FrameRate>
           <q2:FrameSize>
-            <q2:Width>1348</q2:Width>
-            <q2:Height>1348</q2:Height>
+            <q2:Width>256</q2:Width>
+            <q2:Height>256</q2:Height>
           </q2:FrameSize>
           <q2:ResizeInterpolation>NearestNeighbor</q2:ResizeInterpolation>
         </Combinator>
@@ -37,7 +46,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="q2:VideoWriter">
-          <q2:FileName>C:\temp\testIR.avi</q2:FileName>
+          <q2:FileName>D:\data\tracking\BaslerIR.avi</q2:FileName>
           <q2:Suffix>Timestamp</q2:Suffix>
           <q2:Buffered>true</q2:Buffered>
           <q2:Overwrite>false</q2:Overwrite>
@@ -54,12 +63,14 @@
     <Edges>
       <Edge From="0" To="1" Label="Source1" />
       <Edge From="1" To="2" Label="Source1" />
-      <Edge From="3" To="4" Label="Source1" />
+      <Edge From="2" To="3" Label="Source1" />
       <Edge From="4" To="5" Label="Source1" />
+      <Edge From="5" To="6" Label="Source1" />
     </Edges>
   </Workflow>
   <ExtensionTypes>
     <Type>Bonsai.Pylon.PylonCapture, Bonsai.Pylon, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.Resize, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.Vision.VideoWriter, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
   </ExtensionTypes>
 </WorkflowBuilder>

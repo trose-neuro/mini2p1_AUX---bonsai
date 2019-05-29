@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorkflowBuilder Version="2.4.0-preview">
+  <Workflow xmlns:q1="clr-namespace:Bonsai.Harp;assembly=Bonsai.Harp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:q2="clr-namespace:Bonsai.Dsp;assembly=Bonsai.Dsp" xmlns:q3="clr-namespace:Bonsai.Harp.CF;assembly=Bonsai.Harp.CF" xmlns="https://bonsai-rx.org/2018/workflow">
+    <Nodes>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q1:Device">
+          <q1:PortName>COM4</q1:PortName>
+          <q1:DeviceState>Active</q1:DeviceState>
+          <q1:DumpRegisters>true</q1:DumpRegisters>
+          <q1:LedState>On</q1:LedState>
+          <q1:VisualIndicators>On</q1:VisualIndicators>
+          <q1:Heartbeat>Enable</q1:Heartbeat>
+          <q1:IgnoreErrors>false</q1:IgnoreErrors>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>MessageBytes</Selector>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q2:MatrixWriter">
+          <q2:Path>C:\data\bonsai\wear_.bin</q2:Path>
+          <q2:Suffix>Timestamp</q2:Suffix>
+          <q2:Overwrite>true</q2:Overwrite>
+          <q2:Layout>ColumnMajor</q2:Layout>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="q3:WearEvent">
+        <q3:Type>AnalogInput</q3:Type>
+      </Expression>
+      <Expression xsi:type="q3:WearEvent">
+        <q3:Type>Motion</q3:Type>
+      </Expression>
+      <Expression xsi:type="q3:WearEvent">
+        <q3:Type>DigitalInput0</q3:Type>
+      </Expression>
+      <Expression xsi:type="q3:WearEvent">
+        <q3:Type>Acquiring</q3:Type>
+      </Expression>
+    </Nodes>
+    <Edges>
+      <Edge From="0" To="1" Label="Source1" />
+      <Edge From="0" To="3" Label="Source1" />
+      <Edge From="0" To="4" Label="Source1" />
+      <Edge From="0" To="5" Label="Source1" />
+      <Edge From="0" To="6" Label="Source1" />
+      <Edge From="1" To="2" Label="Source1" />
+    </Edges>
+  </Workflow>
+  <ExtensionTypes>
+    <Type>Bonsai.Dsp.MatrixWriter, Bonsai.Dsp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Harp.CF.WearEvent, Bonsai.Harp.CF, Version=1.5.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Harp.Device, Bonsai.Harp, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</Type>
+  </ExtensionTypes>
+</WorkflowBuilder>
