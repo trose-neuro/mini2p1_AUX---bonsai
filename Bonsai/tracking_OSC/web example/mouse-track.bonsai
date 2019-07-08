@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorkflowBuilder Version="2.4.0-preview">
+  <Workflow xmlns:q1="clr-namespace:Bonsai.IO;assembly=Bonsai.System" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:q2="clr-namespace:Bonsai.Scripting;assembly=Bonsai.Scripting" xmlns:q3="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision" xmlns="https://bonsai-rx.org/2018/workflow">
+    <Nodes>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q3:FileCapture">
+          <q3:FileName>mouse3conframe.avi</q3:FileName>
+          <q3:PlaybackRate>30</q3:PlaybackRate>
+          <q3:StartPosition>80</q3:StartPosition>
+          <q3:PositionUnits>Frames</q3:PositionUnits>
+          <q3:Loop>false</q3:Loop>
+          <q3:Playing>true</q3:Playing>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q3:ColorBalance">
+          <q3:Scale>
+            <q3:Val0>3.01</q3:Val0>
+            <q3:Val1>0.78</q3:Val1>
+            <q3:Val2>1.72</q3:Val2>
+            <q3:Val3>1.26</q3:Val3>
+          </q3:Scale>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q3:Grayscale" />
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q3:MorphologicalOperator">
+          <q3:Size>
+            <q3:Width>2</q3:Width>
+            <q3:Height>2</q3:Height>
+          </q3:Size>
+          <q3:Anchor>
+            <q3:X>1</q3:X>
+            <q3:Y>1</q3:Y>
+          </q3:Anchor>
+          <q3:Shape>Cross</q3:Shape>
+          <q3:Iterations>2</q3:Iterations>
+          <q3:Operation>Erode</q3:Operation>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q3:BackgroundSubtraction">
+          <q3:BackgroundFrames>1</q3:BackgroundFrames>
+          <q3:AdaptationRate>0</q3:AdaptationRate>
+          <q3:ThresholdValue>77</q3:ThresholdValue>
+          <q3:ThresholdType>Binary</q3:ThresholdType>
+          <q3:SubtractionMethod>Absolute</q3:SubtractionMethod>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q3:Smooth">
+          <q3:SmoothType>Median</q3:SmoothType>
+          <q3:Size1>13</q3:Size1>
+          <q3:Size2>0</q3:Size2>
+          <q3:Sigma1>0</q3:Sigma1>
+          <q3:Sigma2>0</q3:Sigma2>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q3:FindContours">
+          <q3:Mode>External</q3:Mode>
+          <q3:Method>ChainApproxNone</q3:Method>
+          <q3:Offset>
+            <q3:X>0</q3:X>
+            <q3:Y>0</q3:Y>
+          </q3:Offset>
+          <q3:MinArea>1000</q3:MinArea>
+          <q3:MaxArea xsi:nil="true" />
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q3:BinaryRegionAnalysis" />
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q3:LargestBinaryRegion" />
+      </Expression>
+      <Expression xsi:type="q2:PythonTransform">
+        <q2:Script>import clr
+import math
+clr.AddReference("Bonsai.Vision")
+from Bonsai.Vision import ConnectedComponent
+
+
+@returns(ConnectedComponent)
+def process(value):
+  pi = math.pi
+  centroid = value.Centroid
+  contour = value.Contour
+  if contour is not None:
+    boxW = contour.Rect.Width
+    boxH = contour.Rect.Height
+    boxX = contour.Rect.X
+    boxY = contour.Rect.Y
+    X = boxX + (boxW / 2.0) - centroid.X
+    Y = boxY + (boxH / 2.0) - centroid.Y
+    OrientRad = value.Orientation
+    # Orientation: 0 is right, -pi/2 is up, pi/2 is down
+    # Heading: 0 rad is right, left is pi, down is pi/2, up is 3pi/2 (+ is CW, - is CCW)
+    if (OrientRad &gt;= 0.0) and (OrientRad &lt; pi/4.0):
+      if (X &lt; 0.0):
+        value.Orientation = OrientRad
+      else:
+        value.Orientation = OrientRad + pi
+    elif (OrientRad &gt;= pi/4.0) and (OrientRad &lt;= pi/2.0):
+      if (Y &lt; 0.0):
+        value.Orientation = OrientRad
+      else:
+        value.Orientation = OrientRad + pi
+    elif (OrientRad &lt; 0.0) and (OrientRad &gt; -1.0*pi/4.0):
+      if (X &lt; 0.0):
+        value.Orientation = OrientRad + (2 * pi)
+      else:
+        value.Orientation = OrientRad + pi
+    elif (OrientRad &lt;= -1.0*pi/4.0) and (OrientRad &gt;= -1.0*pi / 2.0):
+      if (Y &gt; 0.0):
+        value.Orientation = OrientRad + (2 * pi)
+      else:
+        value.Orientation = OrientRad + pi
+  return value</q2:Script>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q3:BinaryRegionExtremes">
+          <q3:Method>MajorAxis</q3:Method>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="q2:ExpressionTransform">
+        <q2:Expression>Item1.Y &gt; Item2.Y ? Item1 : Item2</q2:Expression>
+      </Expression>
+      <Expression xsi:type="Subtract">
+        <Operand xsi:type="WorkflowPropertyOfPoint2f">
+          <Value>
+            <X>0</X>
+            <Y>0</Y>
+          </Value>
+        </Operand>
+      </Expression>
+      <Expression xsi:type="q2:ExpressionTransform">
+        <q2:Expression>Math.Sqrt(X*X+Y*Y)</q2:Expression>
+      </Expression>
+      <Expression xsi:type="q1:CsvWriter">
+        <q1:FileName>C:\Users\Setup Local\Desktop\mouse.csv</q1:FileName>
+        <q1:Append>false</q1:Append>
+        <q1:Overwrite>true</q1:Overwrite>
+        <q1:Suffix>None</q1:Suffix>
+        <q1:IncludeHeader>false</q1:IncludeHeader>
+        <q1:CompatibilityMode>true</q1:CompatibilityMode>
+      </Expression>
+      <Expression xsi:type="q1:CsvWriter">
+        <q1:FileName>C:\Users\Setup Local\Desktop\testmouse.csv</q1:FileName>
+        <q1:Append>false</q1:Append>
+        <q1:Overwrite>true</q1:Overwrite>
+        <q1:Suffix>None</q1:Suffix>
+        <q1:IncludeHeader>false</q1:IncludeHeader>
+        <q1:CompatibilityMode>true</q1:CompatibilityMode>
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Centroid</Selector>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="Zip" />
+      </Expression>
+      <Expression xsi:type="q1:CsvWriter">
+        <q1:FileName>C:\Users\Setup Local\Desktop\centroid+nose.csv</q1:FileName>
+        <q1:Append>false</q1:Append>
+        <q1:Overwrite>true</q1:Overwrite>
+        <q1:Suffix>None</q1:Suffix>
+        <q1:IncludeHeader>false</q1:IncludeHeader>
+        <q1:CompatibilityMode>true</q1:CompatibilityMode>
+      </Expression>
+    </Nodes>
+    <Edges>
+      <Edge From="0" To="1" Label="Source1" />
+      <Edge From="1" To="2" Label="Source1" />
+      <Edge From="2" To="3" Label="Source1" />
+      <Edge From="3" To="4" Label="Source1" />
+      <Edge From="4" To="5" Label="Source1" />
+      <Edge From="5" To="6" Label="Source1" />
+      <Edge From="6" To="7" Label="Source1" />
+      <Edge From="7" To="8" Label="Source1" />
+      <Edge From="8" To="9" Label="Source1" />
+      <Edge From="9" To="10" Label="Source1" />
+      <Edge From="9" To="16" Label="Source1" />
+      <Edge From="10" To="11" Label="Source1" />
+      <Edge From="10" To="15" Label="Source1" />
+      <Edge From="11" To="12" Label="Source1" />
+      <Edge From="11" To="17" Label="Source1" />
+      <Edge From="12" To="13" Label="Source1" />
+      <Edge From="13" To="14" Label="Source1" />
+      <Edge From="16" To="17" Label="Source2" />
+      <Edge From="17" To="18" Label="Source1" />
+    </Edges>
+  </Workflow>
+  <ExtensionTypes>
+    <Type>Bonsai.Expressions.SubtractBuilder, Bonsai.Core, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Expressions.WorkflowProperty`1[[OpenCV.Net.Point2f, OpenCV.Net, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null]], Bonsai.Core, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.IO.CsvWriter, Bonsai.System, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Reactive.Zip, Bonsai.Core, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Scripting.ExpressionTransform, Bonsai.Scripting, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Scripting.PythonTransform, Bonsai.Scripting, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.BackgroundSubtraction, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.BinaryRegionAnalysis, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.BinaryRegionExtremes, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.ColorBalance, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.FileCapture, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.FindContours, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.Grayscale, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.LargestBinaryRegion, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.MorphologicalOperator, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.Smooth, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+  </ExtensionTypes>
+</WorkflowBuilder>
