@@ -29,7 +29,7 @@
           <q2:Suffix>FileCount</q2:Suffix>
           <q2:Buffered>true</q2:Buffered>
           <q2:Overwrite>true</q2:Overwrite>
-          <q2:FourCC>FMP4</q2:FourCC>
+          <q2:FourCC>H264</q2:FourCC>
           <q2:FrameRate>60</q2:FrameRate>
           <q2:FrameSize>
             <q2:Width>0</q2:Width>
@@ -39,7 +39,7 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="MemberSelector">
-        <Selector>Timestamp</Selector>
+        <Selector>Timestamp.Ticks</Selector>
       </Expression>
       <Expression xsi:type="MemberSelector">
         <Selector>GrabResult.Timestamp</Selector>
@@ -182,7 +182,7 @@
           <q2:Suffix>FileCount</q2:Suffix>
           <q2:Buffered>true</q2:Buffered>
           <q2:Overwrite>true</q2:Overwrite>
-          <q2:FourCC>FMP4</q2:FourCC>
+          <q2:FourCC>MJPG</q2:FourCC>
           <q2:FrameRate>30</q2:FrameRate>
           <q2:FrameSize>
             <q2:Width>0</q2:Width>
@@ -214,7 +214,7 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="MemberSelector">
-        <Selector>Timestamp</Selector>
+        <Selector>Timestamp.Ticks</Selector>
       </Expression>
       <Expression xsi:type="MemberSelector">
         <Selector>GrabResult.Timestamp</Selector>
@@ -330,7 +330,7 @@
     <Type>Bonsai.Expressions.BooleanProperty, Bonsai.Core, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.Expressions.EqualBuilder, Bonsai.Core, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.Expressions.TakeWhileBuilder, Bonsai.Core, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
-    <Type>Bonsai.Harp.CF.WearEvent, Bonsai.Harp.CF, Version=1.5.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Harp.CF.WearEvent, Bonsai.Harp.CF, Version=1.6.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.Harp.Device, Bonsai.Harp, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.IO.CsvWriter, Bonsai.System, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.Pylon.PylonCapture, Bonsai.Pylon, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null</Type>
