@@ -49,14 +49,93 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
+        <Combinator xsi:type="q2:CropPolygon">
+          <q2:Regions>
+            <q2:ArrayOfPoint>
+              <q2:Point>
+                <q2:X>44</q2:X>
+                <q2:Y>414</q2:Y>
+              </q2:Point>
+              <q2:Point>
+                <q2:X>13</q2:X>
+                <q2:Y>297</q2:Y>
+              </q2:Point>
+              <q2:Point>
+                <q2:X>46</q2:X>
+                <q2:Y>171</q2:Y>
+              </q2:Point>
+              <q2:Point>
+                <q2:X>106</q2:X>
+                <q2:Y>89</q2:Y>
+              </q2:Point>
+              <q2:Point>
+                <q2:X>211</q2:X>
+                <q2:Y>25</q2:Y>
+              </q2:Point>
+              <q2:Point>
+                <q2:X>314</q2:X>
+                <q2:Y>10</q2:Y>
+              </q2:Point>
+              <q2:Point>
+                <q2:X>424</q2:X>
+                <q2:Y>24</q2:Y>
+              </q2:Point>
+              <q2:Point>
+                <q2:X>522</q2:X>
+                <q2:Y>90</q2:Y>
+              </q2:Point>
+              <q2:Point>
+                <q2:X>583</q2:X>
+                <q2:Y>177</q2:Y>
+              </q2:Point>
+              <q2:Point>
+                <q2:X>612</q2:X>
+                <q2:Y>298</q2:Y>
+              </q2:Point>
+              <q2:Point>
+                <q2:X>578</q2:X>
+                <q2:Y>416</q2:Y>
+              </q2:Point>
+              <q2:Point>
+                <q2:X>514</q2:X>
+                <q2:Y>500</q2:Y>
+              </q2:Point>
+              <q2:Point>
+                <q2:X>417</q2:X>
+                <q2:Y>561</q2:Y>
+              </q2:Point>
+              <q2:Point>
+                <q2:X>310</q2:X>
+                <q2:Y>581</q2:Y>
+              </q2:Point>
+              <q2:Point>
+                <q2:X>207</q2:X>
+                <q2:Y>564</q2:Y>
+              </q2:Point>
+              <q2:Point>
+                <q2:X>104</q2:X>
+                <q2:Y>500</q2:Y>
+              </q2:Point>
+            </q2:ArrayOfPoint>
+          </q2:Regions>
+          <q2:MaskType>ToZero</q2:MaskType>
+          <q2:FillValue>
+            <q2:Val0>0</q2:Val0>
+            <q2:Val1>0</q2:Val1>
+            <q2:Val2>0</q2:Val2>
+            <q2:Val3>0</q2:Val3>
+          </q2:FillValue>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
         <Combinator xsi:type="q2:FindContours">
-          <q2:Mode>External</q2:Mode>
+          <q2:Mode>ConnectedComponent</q2:Mode>
           <q2:Method>ChainApproxNone</q2:Method>
           <q2:Offset>
             <q2:X>0</q2:X>
             <q2:Y>0</q2:Y>
           </q2:Offset>
-          <q2:MinArea>500</q2:MinArea>
+          <q2:MinArea>300</q2:MinArea>
           <q2:MaxArea>3000</q2:MaxArea>
         </Combinator>
       </Expression>
@@ -337,72 +416,73 @@ def process(value):
     </Nodes>
     <Edges>
       <Edge From="0" To="6" Label="Source2" />
-      <Edge From="1" To="21" Label="Source2" />
+      <Edge From="1" To="22" Label="Source2" />
       <Edge From="2" To="3" Label="Source1" />
-      <Edge From="2" To="19" Label="Source1" />
+      <Edge From="2" To="20" Label="Source1" />
       <Edge From="3" To="4" Label="Source1" />
       <Edge From="3" To="8" Label="Source1" />
       <Edge From="4" To="5" Label="Source1" />
       <Edge From="4" To="7" Label="Source1" />
       <Edge From="5" To="6" Label="Source1" />
-      <Edge From="6" To="29" Label="Source1" />
-      <Edge From="7" To="20" Label="Source1" />
+      <Edge From="6" To="30" Label="Source1" />
+      <Edge From="7" To="21" Label="Source1" />
       <Edge From="8" To="9" Label="Source1" />
       <Edge From="9" To="10" Label="Source1" />
       <Edge From="10" To="11" Label="Source1" />
       <Edge From="11" To="12" Label="Source1" />
       <Edge From="12" To="13" Label="Source1" />
-      <Edge From="12" To="15" Label="Source1" />
       <Edge From="13" To="14" Label="Source1" />
-      <Edge From="14" To="17" Label="Source1" />
-      <Edge From="15" To="16" Label="Source1" />
-      <Edge From="16" To="17" Label="Source2" />
-      <Edge From="17" To="18" Label="Source1" />
-      <Edge From="17" To="20" Label="Source3" />
-      <Edge From="19" To="20" Label="Source2" />
-      <Edge From="19" To="49" Label="Source2" />
-      <Edge From="20" To="21" Label="Source1" />
-      <Edge From="21" To="27" Label="Source1" />
-      <Edge From="22" To="23" Label="Source1" />
-      <Edge From="22" To="47" Label="Source1" />
+      <Edge From="13" To="16" Label="Source1" />
+      <Edge From="14" To="15" Label="Source1" />
+      <Edge From="15" To="18" Label="Source1" />
+      <Edge From="16" To="17" Label="Source1" />
+      <Edge From="17" To="18" Label="Source2" />
+      <Edge From="18" To="19" Label="Source1" />
+      <Edge From="18" To="21" Label="Source3" />
+      <Edge From="20" To="21" Label="Source2" />
+      <Edge From="20" To="50" Label="Source2" />
+      <Edge From="21" To="22" Label="Source1" />
+      <Edge From="22" To="28" Label="Source1" />
       <Edge From="23" To="24" Label="Source1" />
-      <Edge From="23" To="26" Label="Source1" />
-      <Edge From="23" To="28" Label="Source1" />
-      <Edge From="23" To="30" Label="Source1" />
-      <Edge From="23" To="40" Label="Source1" />
-      <Edge From="23" To="46" Label="Source1" />
+      <Edge From="23" To="48" Label="Source1" />
       <Edge From="24" To="25" Label="Source1" />
-      <Edge From="26" To="27" Label="Source2" />
-      <Edge From="28" To="29" Label="Source2" />
-      <Edge From="30" To="39" Label="Source2" />
-      <Edge From="31" To="38" Label="Source2" />
-      <Edge From="32" To="44" Label="Source2" />
-      <Edge From="33" To="34" Label="Source1" />
-      <Edge From="33" To="42" Label="Source1" />
+      <Edge From="24" To="27" Label="Source1" />
+      <Edge From="24" To="29" Label="Source1" />
+      <Edge From="24" To="31" Label="Source1" />
+      <Edge From="24" To="41" Label="Source1" />
+      <Edge From="24" To="47" Label="Source1" />
+      <Edge From="25" To="26" Label="Source1" />
+      <Edge From="27" To="28" Label="Source2" />
+      <Edge From="29" To="30" Label="Source2" />
+      <Edge From="31" To="40" Label="Source2" />
+      <Edge From="32" To="39" Label="Source2" />
+      <Edge From="33" To="45" Label="Source2" />
       <Edge From="34" To="35" Label="Source1" />
+      <Edge From="34" To="43" Label="Source1" />
       <Edge From="35" To="36" Label="Source1" />
       <Edge From="36" To="37" Label="Source1" />
-      <Edge From="36" To="41" Label="Source1" />
       <Edge From="37" To="38" Label="Source1" />
+      <Edge From="37" To="42" Label="Source1" />
       <Edge From="38" To="39" Label="Source1" />
-      <Edge From="40" To="45" Label="Source2" />
-      <Edge From="41" To="43" Label="Source2" />
-      <Edge From="42" To="43" Label="Source1" />
+      <Edge From="39" To="40" Label="Source1" />
+      <Edge From="41" To="46" Label="Source2" />
+      <Edge From="42" To="44" Label="Source2" />
       <Edge From="43" To="44" Label="Source1" />
       <Edge From="44" To="45" Label="Source1" />
-      <Edge From="46" To="52" Label="Source2" />
-      <Edge From="47" To="48" Label="Source1" />
+      <Edge From="45" To="46" Label="Source1" />
+      <Edge From="47" To="53" Label="Source2" />
       <Edge From="48" To="49" Label="Source1" />
-      <Edge From="49" To="51" Label="Source1" />
-      <Edge From="50" To="51" Label="Source2" />
-      <Edge From="51" To="52" Label="Source1" />
+      <Edge From="49" To="50" Label="Source1" />
+      <Edge From="50" To="52" Label="Source1" />
+      <Edge From="51" To="52" Label="Source2" />
+      <Edge From="52" To="53" Label="Source1" />
     </Edges>
   </Workflow>
   <ExtensionTypes>
     <Type>Bonsai.Expressions.BooleanProperty, Bonsai.Core, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.Expressions.EqualBuilder, Bonsai.Core, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.Expressions.TakeWhileBuilder, Bonsai.Core, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
-    <Type>Bonsai.Harp.CF.WearEvent, Bonsai.Harp.CF, Version=1.5.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Harp.CF.WearEvent, Bonsai.Harp.CF, Version=1.6.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.Harp.Device, Bonsai.Harp, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.IO.CsvWriter, Bonsai.System, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.Osc.SendMessage, Bonsai.Osc, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
@@ -412,6 +492,7 @@ def process(value):
     <Type>Bonsai.Reactive.Zip, Bonsai.Core, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.Scripting.PythonTransform, Bonsai.Scripting, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.Vision.BinaryRegionAnalysis, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
+    <Type>Bonsai.Vision.CropPolygon, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.Vision.FindContours, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.Vision.LargestBinaryRegion, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
     <Type>Bonsai.Vision.Resize, Bonsai.Vision, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</Type>
