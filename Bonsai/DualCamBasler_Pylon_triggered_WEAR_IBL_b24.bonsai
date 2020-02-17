@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WorkflowBuilder Version="2.4.0"
+<WorkflowBuilder Version="2.4.1"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xmlns:q1="clr-namespace:Bonsai.Pylon;assembly=Bonsai.Pylon"
+                 xmlns:p1="clr-namespace:Bonsai.Pylon;assembly=Bonsai.Pylon"
                  xmlns:rx="clr-namespace:Bonsai.Reactive;assembly=Bonsai.Core"
                  xmlns:cv="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision"
-                 xmlns:q2="clr-namespace:Bonsai.Harp;assembly=Bonsai.Harp"
-                 xmlns:q3="clr-namespace:Bonsai.Harp.CF;assembly=Bonsai.Harp.CF"
+                 xmlns:p2="clr-namespace:Bonsai.Harp;assembly=Bonsai.Harp"
+                 xmlns:p3="clr-namespace:Bonsai.Harp.CF;assembly=Bonsai.Harp.CF"
                  xmlns:io="clr-namespace:Bonsai.IO;assembly=Bonsai.System"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
@@ -17,9 +17,9 @@
         <Property Name="FileName" DisplayName="IR_TimestampsFileName" />
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="q1:PylonCapture">
-          <q1:SerialNumber>22657050</q1:SerialNumber>
-          <q1:ParameterFile>sync to optitrack acA2040-55um_22657050.pfs</q1:ParameterFile>
+        <Combinator xsi:type="p1:PylonCapture">
+          <p1:SerialNumber>22657050</p1:SerialNumber>
+          <p1:ParameterFile>sync to optitrack acA2040-55um_22657050.pfs</p1:ParameterFile>
         </Combinator>
       </Expression>
       <Expression xsi:type="MemberSelector">
@@ -33,7 +33,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="cv:VideoWriter">
-          <cv:FileName>D:\data\tracking\IR_video.avi</cv:FileName>
+          <cv:FileName>E:\data\tracking\IR_video.avi</cv:FileName>
           <cv:Suffix>FileCount</cv:Suffix>
           <cv:Buffered>true</cv:Buffered>
           <cv:Overwrite>true</cv:Overwrite>
@@ -50,18 +50,18 @@
         <Selector>Timestamp.Ticks</Selector>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="q2:Device">
-          <q2:PortName>COM4</q2:PortName>
-          <q2:DeviceState>Active</q2:DeviceState>
-          <q2:DumpRegisters>true</q2:DumpRegisters>
-          <q2:LedState>On</q2:LedState>
-          <q2:VisualIndicators>On</q2:VisualIndicators>
-          <q2:Heartbeat>Disable</q2:Heartbeat>
-          <q2:IgnoreErrors>false</q2:IgnoreErrors>
+        <Combinator xsi:type="p2:Device">
+          <p2:PortName>COM3</p2:PortName>
+          <p2:DeviceState>Active</p2:DeviceState>
+          <p2:DumpRegisters>true</p2:DumpRegisters>
+          <p2:LedState>On</p2:LedState>
+          <p2:VisualIndicators>On</p2:VisualIndicators>
+          <p2:Heartbeat>Disable</p2:Heartbeat>
+          <p2:IgnoreErrors>false</p2:IgnoreErrors>
         </Combinator>
       </Expression>
-      <Expression xsi:type="q3:WearEvent">
-        <q3:Type>Acquiring</q3:Type>
+      <Expression xsi:type="p3:WearEvent">
+        <p3:Type>Acquiring</p3:Type>
       </Expression>
       <Expression xsi:type="TakeWhile">
         <Workflow>
@@ -144,9 +144,9 @@
         <Property Name="FileName" DisplayName="RGB_TimestampsFileName" />
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="q1:PylonCapture">
-          <q1:SerialNumber>22370143</q1:SerialNumber>
-          <q1:ParameterFile>COLOR RGB8 sync to optitrack acA2040-55uc_22657050.pfs</q1:ParameterFile>
+        <Combinator xsi:type="p1:PylonCapture">
+          <p1:SerialNumber>22370143</p1:SerialNumber>
+          <p1:ParameterFile>COLOR RGB8 sync to optitrack acA2040-55uc_22657050.pfs</p1:ParameterFile>
         </Combinator>
       </Expression>
       <Expression xsi:type="MemberSelector">
@@ -169,7 +169,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="cv:VideoWriter">
-          <cv:FileName>D:\data\tracking\RGB_video.avi</cv:FileName>
+          <cv:FileName>E:\data\tracking\RGB_video.avi</cv:FileName>
           <cv:Suffix>FileCount</cv:Suffix>
           <cv:Buffered>true</cv:Buffered>
           <cv:Overwrite>true</cv:Overwrite>
@@ -214,7 +214,7 @@
         <Combinator xsi:type="rx:Zip" />
       </Expression>
       <Expression xsi:type="io:CsvWriter">
-        <io:FileName>D:\data\tracking\RGB_timestamps.ssv</io:FileName>
+        <io:FileName>E:\data\tracking\RGB_timestamps.ssv</io:FileName>
         <io:Append>false</io:Append>
         <io:Overwrite>true</io:Overwrite>
         <io:Suffix>FileCount</io:Suffix>
@@ -243,8 +243,8 @@
           </Edges>
         </Workflow>
       </Expression>
-      <Expression xsi:type="q3:WearEvent">
-        <q3:Type>DigitalInput0</q3:Type>
+      <Expression xsi:type="p3:WearEvent">
+        <p3:Type>DigitalInput0</p3:Type>
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Timestamp" />
@@ -259,7 +259,7 @@
         <Property Name="FileName" DisplayName="2p_IR_TimestampsFileName" />
       </Expression>
       <Expression xsi:type="io:CsvWriter">
-        <io:FileName>D:\data\tracking\2p_IR_timestamps.ssv</io:FileName>
+        <io:FileName>E:\data\tracking\2p_IR_timestamps.ssv</io:FileName>
         <io:Append>false</io:Append>
         <io:Overwrite>true</io:Overwrite>
         <io:Suffix>FileCount</io:Suffix>
@@ -276,7 +276,7 @@
         <Combinator xsi:type="rx:Zip" />
       </Expression>
       <Expression xsi:type="io:CsvWriter">
-        <io:FileName>D:\data\tracking\IR_Track_timestamps.ssv</io:FileName>
+        <io:FileName>E:\data\tracking\IR_Track_timestamps.ssv</io:FileName>
         <io:Append>false</io:Append>
         <io:Overwrite>true</io:Overwrite>
         <io:Suffix>FileCount</io:Suffix>

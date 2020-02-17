@@ -97,8 +97,8 @@
       <Y>163</Y>
     </Location>
     <Size>
-      <Width>328</Width>
-      <Height>53</Height>
+      <Width>336</Width>
+      <Height>65</Height>
     </Size>
     <WindowState>Normal</WindowState>
     <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
@@ -375,8 +375,8 @@
       <Y>724</Y>
     </Location>
     <Size>
-      <Width>328</Width>
-      <Height>53</Height>
+      <Width>336</Width>
+      <Height>65</Height>
     </Size>
     <WindowState>Normal</WindowState>
     <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
@@ -391,8 +391,8 @@
       <Y>788</Y>
     </Location>
     <Size>
-      <Width>328</Width>
-      <Height>53</Height>
+      <Width>336</Width>
+      <Height>65</Height>
     </Size>
     <WindowState>Normal</WindowState>
     <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
@@ -543,8 +543,8 @@
       <Y>223</Y>
     </Location>
     <Size>
-      <Width>328</Width>
-      <Height>53</Height>
+      <Width>336</Width>
+      <Height>65</Height>
     </Size>
     <WindowState>Normal</WindowState>
     <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
